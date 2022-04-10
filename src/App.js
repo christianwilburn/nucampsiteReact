@@ -9,7 +9,8 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            campsites: CAMPSITES
+            campsites: CAMPSITES,
+            selectedCampsite: null
         };
     }
   render() {
@@ -21,6 +22,7 @@ class App extends Component {
               </div>
               </Navbar>
               <Directory campsites={this.state.campsites} />
+              {/* <CampsiteInfo campsite={this.state.campsites.filter(campsite => campsite.id === this.state.selectedCampsite)[0]}/> */}
           </div>
       );
   }
