@@ -1,6 +1,8 @@
 import React from "react";
 import { Card, CardImg, CardImgOverlay, CardTitle } from "reactstrap";
 
+// RenderDirectoryItem starts
+
 function RenderDirectoryItem({ campsite, onClick }) {
   return (
     <Card onClick={() => onClick(campsite.id)}>
@@ -11,6 +13,13 @@ function RenderDirectoryItem({ campsite, onClick }) {
     </Card>
   );
 }
+
+
+// RenderDirectoryItem ends 
+
+
+// Directory component starts
+
 
 function  Directory(props) {
 
@@ -26,5 +35,7 @@ function  Directory(props) {
     );
   
 }
+
+// Directory component ends
 
 export default Directory;

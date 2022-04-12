@@ -1,8 +1,7 @@
-import React from "react";
 import { Card, CardImg, CardText, CardBody, CardTitle } from "reactstrap";
 
 
-
+// RenderCampsite starts
 
    function RnderCampsite({campsite}) {
     return (
@@ -18,6 +17,9 @@ import { Card, CardImg, CardText, CardBody, CardTitle } from "reactstrap";
     );
   }
 
+  // RenderCampsite ends
+
+  // RenderComments function starts
   function RenderComments({comments}) {
     if (comments) {
       return (
@@ -45,6 +47,11 @@ import { Card, CardImg, CardText, CardBody, CardTitle } from "reactstrap";
     );
   }
 
+  // RenderComments function ends
+
+
+  // CampsiteInfo Component starts 
+
    function CampsiteInfo(props) {
     if (props.campsite) {
       return (
@@ -59,6 +66,6 @@ import { Card, CardImg, CardText, CardBody, CardTitle } from "reactstrap";
       return <div />;
     }
   }
-
+// CampsiteInfo Component ends
 
 export default CampsiteInfo;

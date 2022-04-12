@@ -6,6 +6,9 @@ import CampsiteInfo from './CampsiteInfoComponent';
 import { CAMPSITES} from '../shared/campsites'
 
 
+// Main component starts
+
+
 class Main extends Component {
     constructor(props) {
         super(props);
@@ -15,10 +18,16 @@ class Main extends Component {
         };
     }
 
+    // onCampsiteSelect starts here
+
     onCampsiteSelect(campsiteId) {
         this.setState({ selectedCampsite: campsiteId });
       }
 
+    //   onCampsiteSelect ends here
+
+
+    
   render() {
       return (
           <div>
@@ -33,5 +42,7 @@ class Main extends Component {
       );
   }
 }
+
+// Main component ends
 
 export default Main;

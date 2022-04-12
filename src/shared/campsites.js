@@ -1,5 +1,7 @@
 export const CAMPSITES = [
     {
+        //campsite begins
+
         id: 0,
         name: 'React Lake Campground',
         image: 'assets/images/react-lake.jpg',
@@ -42,8 +44,14 @@ export const CAMPSITES = [
                 date: "2018-07-23T19:44Z"
             }
         ]
+
+        //campsite ends
     },
     {
+
+        //campsite begins
+
+
         id: 1,
         name:'Chrome River Campground ',
         image: 'assets/images/chrome-river.jpg',
@@ -86,8 +94,12 @@ export const CAMPSITES = [
                 date: "2018-07-23T19:44Z"
             }
         ]
+
+        //campsite ends
     },
     {
+        //campsite begins
+
         id: 2,
         name:'Breadcrumb Trail Campground',
         image: 'assets/images/breadcrumb-trail.jpg',
@@ -130,8 +142,12 @@ export const CAMPSITES = [
                 date: "2018-07-23T19:44Z"
             }
         ]
+        //campsite ends
+
     },
     {
+        //campsite begins
+
         id: 3,
         name:'Redux Woods Campground',
         image: 'assets/images/redux-woods.jpg',
@@ -175,4 +191,6 @@ export const CAMPSITES = [
             }
         ]
     }
+    //campsite ends
+
 ];
