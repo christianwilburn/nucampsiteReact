@@ -3,7 +3,7 @@ import { Card, CardImg, CardText, CardBody, CardTitle } from "reactstrap";
 
 // RenderCampsite starts
 
-   function RnderCampsite({campsite}) {
+   function RenderCampsite({campsite}) {
     return (
       <div className="col-md-5 m-1">
         <Card>
@@ -57,8 +57,8 @@ import { Card, CardImg, CardText, CardBody, CardTitle } from "reactstrap";
       return (
         <div className="container">
           <div className="row">
-            <RnderCampsite campsite={props.campsite} />
-            <RenderComments comments={props.campsite.comments} />
+            <RenderCampsite campsite={props.campsite} />
+            <RenderComments comments={props.comments} />
           </div>
         </div>
       );
