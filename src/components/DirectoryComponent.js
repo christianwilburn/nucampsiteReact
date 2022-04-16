@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardImg, CardImgOverlay, CardTitle } from "reactstrap";
+import { Breadcrumb, BreadcrumbItem, Card, CardImg, CardImgOverlay, CardTitle } from "reactstrap";
 import { Link } from 'react-router-dom';
 
 // RenderDirectoryItem starts
@@ -33,6 +33,17 @@ function  Directory(props) {
     });
     return (
       <div className="container">
+        <div className="row0">
+          <div className="col">
+            <Breadcrumb>
+            <BreadcrumbItem><Link to='/home'>Home</Link></BreadcrumbItem>
+            <BreadcrumbItem active>Directory</BreadcrumbItem>
+            <hr/>
+            <h2>Directory</h2>
+            <hr/>
+            </Breadcrumb>
+          </div>
+        </div>
         <div className="row">{directory}</div>
       </div>
     );
