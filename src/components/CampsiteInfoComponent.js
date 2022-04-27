@@ -15,6 +15,7 @@ import {
 import { Link } from "react-router-dom";
 import { Component } from "react";
 import { Control, Errors, LocalForm } from "react-redux-form";
+import { addComment } from "../redux/ActiontCreators";
 
 // RenderCampsite starts
 
@@ -57,8 +58,8 @@ class CommentForm extends Component {
   }
 
   handleSubmmit(values) {
-    console.log("Current state is: " + JSON.stringify(values));
-    alert("Current state is: " + JSON.stringify(values));
+    this.toggleModal();
+    this.props.addComment(this.props.campsiteId, values.rating, values.author, values.text);
   }
 
   render() {
@@ -180,7 +181,10 @@ function RenderComments({ comments }) {
             </div>
           );
         })}
-        <CommentForm />
+
+        {/* not recognizing campsiteId */}
+
+        <CommentForm campsiteId={campsiteId} addComment={addComment} />
       </div>
     );
   }
@@ -210,7 +214,10 @@ function CampsiteInfo(props) {
         </div>
         <div className="row">
           <RenderCampsite campsite={props.campsite} />
-          <RenderComments comments={props.comments} />
+          <RenderComments comments={props.comments} 
+          addComment={props.addComment}
+          campsiteId={props.campsite.id}
+          />
         </div>
       </div>
     );
