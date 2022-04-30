@@ -17,6 +17,7 @@ import { Component } from "react";
 import { Control, Errors, LocalForm } from "react-redux-form";
 import { addComment } from "../redux/ActiontCreators";
 import { Loading } from "./LoadingComponent";
+import { baseUrl } from "../shared/baseUrl";
 
 // RenderCampsite starts
 
@@ -24,7 +25,7 @@ function RenderCampsite({ campsite }) {
   return (
     <div className="col-md-5 m-1">
       <Card>
-        <CardImg top src={campsite.image} alt={campsite.name} />
+        <CardImg top src={baseUrl + campsite.image} alt={campsite.name} />
         <CardBody>
           <CardText>{campsite.description}</CardText>
         </CardBody>
