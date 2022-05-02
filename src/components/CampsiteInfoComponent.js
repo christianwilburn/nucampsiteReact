@@ -16,7 +16,7 @@ import { FadeTransform, Fade, Stagger } from "react-animation-components";
 import { Link } from "react-router-dom";
 import { Component } from "react";
 import { Control, Errors, LocalForm } from "react-redux-form";
-import { postComment } from "../redux/ActiontCreators";
+// import { postComment } from "../redux/ActiontCreators";
 import { Loading } from "./LoadingComponent";
 import { baseUrl } from "../shared/baseUrl";
 
@@ -201,7 +201,6 @@ function RenderComments({ comments, postComment, campsiteId }) {
           })}
         </Stagger>
 
-        {/* not recognizing campsiteId */}
 
         <CommentForm campsiteId={campsiteId} postComment={postComment} />
       </div>

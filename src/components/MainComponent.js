@@ -13,6 +13,8 @@ import {
   fetchCampsites,
   fetchComments,
   fetchPromotions,
+  fetchPartners,
+  postFeedback,
 } from "../redux/ActiontCreators";
 import { Switch, Route, Redirect, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
@@ -32,7 +34,9 @@ const mapDispatchToProps = {
   fetchCampsites: () => fetchCampsites(),
   resetFeedbackForm: () => actions.reset("feedbackForm"),
   fetchComments: () => fetchComments(),
-  fetchPromotions: () => fetchPromotions,
+  fetchPromotions: () => fetchPromotions(),
+  fetchPartners: () => fetchPartners(),
+  postFeedback: () => postFeedback(),
 };
 
 class Main extends Component {
@@ -40,6 +44,7 @@ class Main extends Component {
     this.props.fetchCampsites();
     this.props.fetchComments();
     this.props.fetchPromotions();
+    this.props.fetchPartners();
   }
 
   render() {
@@ -52,7 +57,7 @@ class Main extends Component {
             )[0]
           }
           campsitesLoading={this.props.campsites.isLoading}
-          campsitesErrMess={this.props.campsites.ErrMess}
+          campsitesErrMess={this.props.campsites.errMess}
           promotion={
             this.props.promotions.promotions.filter(
               (promotion) => promotion.featured
@@ -60,7 +65,9 @@ class Main extends Component {
           }
           promotionLoading={this.props.promotions.isLoading}
           promotionErrMess={this.props.promotions.errMess}
-          partner={this.props.partners.filter((partner) => partner.featured)[0]}
+            partner={this.props.partners.partners.filter(partner => partner.featured)[0]}
+            partnersLoading={this.props.partners.isLoading}
+            partnersErrMess={this.props.partners.errMess}
         />
       );
     };
